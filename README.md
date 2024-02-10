@@ -6,6 +6,6 @@ npx nodemon app.js
 ```
 When this is done you should see a message stating that the backend is running on port `8080`. Next, start the frontend by switching to the frontend folder and running:
 ```
-npx echo start
+npx expo start
 ```
 After running this command, you should see a QR code in your console. Make sure the Expo Go app is installed on your phone and then scan this QR code to open the client on your phone.
