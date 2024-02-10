@@ -4,7 +4,7 @@ Create a `.env` in the top directory containing a single key `API_URL` set to th
 ```
 npx nodemon app.js
 ```
-When this is done you should see a message stating that the backend is running on port `8080`. Next, start the frontend by switching to the frontend folder and running:
+When this is done you should see a message stating that the backend is running on port `8080`. Next, start the frontend by switching to the `frontend` folder and running:
 ```
 npx expo start
 ```
