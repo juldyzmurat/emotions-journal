@@ -1,11 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
-import { Button, StyleSheet, TouchableOpacity, Text, View } from 'react-native';
-import { API_URL } from 'react-native-dotenv';
+import { Button, Pressable, StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
   const sendReq = () => {
-    console.log(`Sending GET request to '${API_URL}/'...`);
-    return fetch(`${API_URL}/`)
+    console.log(`Sending GET request to '${process.env.EXPO_PUBLIC_API_URL}/'...`);
+    return fetch(`${process.env.EXPO_PUBLIC_API_URL}/`)
       .then(res => res.text())
       .then(jsonText => console.log(`RES: ${jsonText}`))
       .catch(err => console.error(err));
@@ -13,9 +12,9 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <TouchableOpacity onPress={sendReq} style={styles.button}>
+      <Pressable onPress={sendReq} style={styles.button}>
         <Text style={styles.buttonText}>Send Request</Text>
-      </TouchableOpacity>
+      </Pressable>
       <StatusBar style="auto" />
     </View>
   );
